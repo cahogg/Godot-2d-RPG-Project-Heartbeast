@@ -1,0 +1,3 @@
+TileMap may be more appropriate than sprite region for grass?
+
+Made DirtPath TileMap an instanced scene.

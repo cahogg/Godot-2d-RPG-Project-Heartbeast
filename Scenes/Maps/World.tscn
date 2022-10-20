@@ -1,26 +1,40 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/TileMaps/ForestTileMap/Foilage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Bodies/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/WorldObjects/ForestObjects/Foilage/Bush.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/WorldObjects/ForestObjects/Foilage/Grass.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/WorldObjects/ForestObjects/Foilage/Tree.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Action RPG Resources/World/GrassBackground.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/TileMaps/ForestTileMap/DirtPath.tscn" type="PackedScene" id=7]
 
-[node name="World" type="YSort"]
+[node name="World" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 1.05625, 1.10556 )
+texture = ExtResource( 6 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 320, 180 )
+
+[node name="DirtPath" parent="." instance=ExtResource( 7 )]
+tile_data = PoolIntArray( -65534, 0, 0, -65533, 0, 1, -65532, 0, 2, 2, 0, 65536, 3, 0, 65537, 4, 0, 65538, 65538, 0, 65536, 65539, 0, 65537, 65540, 0, 65538, 131074, 0, 65536, 131075, 0, 65537, 131076, 0, 65538, 196610, 0, 65536, 196611, 0, 65541, 196612, 0, 131074, 262146, 0, 65536, 262147, 0, 65538, 327682, 0, 65536, 327683, 0, 65538, 393218, 0, 65536, 393219, 0, 131077, 393220, 0, 1, 393221, 0, 1, 393222, 0, 1, 393223, 0, 1, 393224, 0, 1, 393225, 0, 1, 393226, 0, 1, 393227, 0, 1, 393228, 0, 2, 458754, 0, 131072, 458755, 0, 131073, 458756, 0, 131073, 458757, 0, 131073, 458758, 0, 131073, 458759, 0, 131073, 458760, 0, 131073, 458761, 0, 131073, 458762, 0, 131073, 458763, 0, 65542, 458764, 0, 131077, 458765, 0, 1, 458766, 0, 1, 458767, 0, 1, 458768, 0, 1, 458769, 0, 1, 458770, 0, 2, 524299, 0, 131072, 524300, 0, 131073, 524301, 0, 131073, 524302, 0, 131073, 524303, 0, 131073, 524304, 0, 65542, 524305, 0, 65537, 524306, 0, 65538, 589840, 0, 65536, 589841, 0, 65537, 589842, 0, 65538, 655376, 0, 65536, 655377, 0, 65537, 655378, 0, 65538, 720912, 0, 65536, 720913, 0, 65537, 720914, 0, 65538, 786448, 0, 131072, 786449, 0, 131073, 786450, 0, 131074 )
 
 [node name="Foilage" parent="." instance=ExtResource( 1 )]
 position = Vector2( 153, 81 )
 cell_size = Vector2( 32, 32 )
 tile_data = PoolIntArray( -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -65541, 0, 0, -131067, 0, 0, -5, 0, 0, -65531, 0, 0, 65531, 0, 0, 5, 0, 0, 131067, 0, 0, 65541, 0, 0, 65578, 0, 0, 196603, 0, 0, 131077, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 153, 81 )
 
-[node name="Grass" parent="." instance=ExtResource( 4 )]
+[node name="Grass" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 101, 125 )
 
-[node name="Bush" parent="." instance=ExtResource( 3 )]
+[node name="Bush" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 224, 92 )
 
-[node name="Tree" parent="." instance=ExtResource( 5 )]
+[node name="Tree" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 75, 54 )
