@@ -1,0 +1,2 @@
+Because distance between X and Y coordinates are > distance between 0 and X or 0 and Y, movement will generally be faster diagonally rather than vertically/horizontally. Normalize fixes this.
+
