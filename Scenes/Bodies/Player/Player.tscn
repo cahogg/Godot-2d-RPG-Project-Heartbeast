@@ -11,10 +11,10 @@ height = 4.0
 script = ExtResource( 2 )
 
 [node name="SpriteSheet" type="Sprite" parent="."]
+position = Vector2( 0, -10 )
 texture = ExtResource( 1 )
 hframes = 60
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 10 )
 rotation = -1.5708
 shape = SubResource( 1 )

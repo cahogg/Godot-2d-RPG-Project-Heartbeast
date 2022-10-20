@@ -1,0 +1,7 @@
+I left Bush in the tilemap to act as a border for now, and made Bush, Grass and Tree collision scenes that are seperate from the tilemap. Foilage TileMap may be removed later. 
+
+Grass has a CollisionShape2D in it's node tree, but I am not likely to use it unless I wanted to add a "rustle" animation for when the player walks through it.
+
+Ysort with grass is a bit weird. May consider adjustments later should he not go over it in a future episode.
+
+Setting the CollisionShape2D's location to 0,0 and having the sprite's feet be at that point helps clean up Ysort a lot. Seriously pay attention to what he says about the matter.
