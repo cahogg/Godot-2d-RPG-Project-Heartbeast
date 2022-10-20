@@ -1,0 +1,5 @@
+Use Import to change file import settings. Used for differentiating between Pixel Art and other types of images.
+
+Window size of 320 x 180 is ideal for Pixel Art. Multiply both by 4 in Test Size to get 1280 x 720. Adjust stretch mode to "2D" to scale everything up.
+
+Can remove uneeded editor features by creating a new editor profile under "Manager Editor Features".
