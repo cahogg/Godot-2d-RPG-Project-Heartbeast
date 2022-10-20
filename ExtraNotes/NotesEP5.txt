@@ -1,0 +1,1 @@
+Set length of animation based on number of sprites for given animation. I.E 6 frames of walking would be a length of 0.6.

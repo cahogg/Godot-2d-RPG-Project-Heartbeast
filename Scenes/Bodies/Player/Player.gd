@@ -6,6 +6,8 @@ const FRICTION = 500
 
 var velocity = Vector2.ZERO
 
+onready var animationPlayer = $AnimationPlayer
+
 #delta contains time the last frame took to process. Delta = 1/60 if 60FPS, for example.
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -16,8 +18,13 @@ func _physics_process(delta):
 	input_vector = input_vector.normalized()
 	#Handles the speed/acceleration of the player.
 	if input_vector != Vector2.ZERO:
+		if input_vector.x > 0:
+			animationPlayer.play("RunRight")
+		else:
+			animationPlayer.play("RunLeft")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
+		animationPlayer.play("IdleRight")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
 	velocity = move_and_slide(velocity)
