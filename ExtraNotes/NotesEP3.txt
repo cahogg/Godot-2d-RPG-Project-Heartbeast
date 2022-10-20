@@ -1,0 +1,11 @@
+If your game slows down, not using delta can be helpful for movement. Many ways to handle the issue, as usual in all things programming.
+
+There may be changes to movement constants to clean things up.
+
+Using Capsule Shape for Collision2D can make moving around more forgiving when bumping into corners.
+
+Having the collision on the feet allows for depth to be emulated. I.E. Player standing in front of the tree will stop at the feet instead of the head. Likely to use more collision boxes for hit boxes.
+
+I went ahead and made a tilemap entirely for foilage (Scenes > TileMaps > ForestTileMap > Foilage.tscn) in the forest, as adding a collision box to each individual sprite is not effecient. The tutorial does go into tile maps later, but I've been through a number of tutorials in the past that have revealed this for me.
+
+He doesn't go into it this episode, but structure of your nodes mater for the purpuses of sprites. The further bottom node will be the front most sprite, while the furthest back sprite will be behind everything.
