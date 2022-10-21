@@ -1,0 +1,5 @@
+Godot 3.5 seems to adjust the Subtile and Step sizes base on adjustments made to Cell Size.
+
+The BitMask he uses may or may not be perfect. I experienced a my tile rotating 90 degrees clockwise. Closing and reopening the Editor seemed to fix it.
+
+If, while doing a collision, you find that a box is more orange than the rest, it likely means you have two collisions ontop of the same tile. Deleting one will not delete the other.
