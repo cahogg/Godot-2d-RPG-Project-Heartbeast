@@ -1,0 +1,3 @@
+Inputs are different than video. WASD is set to "move_<insert direction here>". I'm using Left Mouse Button for attack.
+
+Make sure to use "dots" blend when using animationTree.

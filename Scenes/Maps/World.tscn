@@ -28,11 +28,13 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 2, -65533, 0, 0, -65532, 0, 1, -6
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 153, 81 )
 
-[node name="Grass" parent="YSort" instance=ExtResource( 4 )]
+[node name="YSort" type="YSort" parent="YSort"]
+
+[node name="Grass" parent="YSort/YSort" instance=ExtResource( 4 )]
 position = Vector2( 101, 125 )
 
-[node name="Bush" parent="YSort" instance=ExtResource( 3 )]
+[node name="Bush" parent="YSort/YSort" instance=ExtResource( 3 )]
 position = Vector2( 224, 92 )
 
-[node name="Tree" parent="YSort" instance=ExtResource( 5 )]
+[node name="Tree" parent="YSort/YSort" instance=ExtResource( 5 )]
 position = Vector2( 75, 54 )
