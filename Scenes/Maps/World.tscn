@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/TileMaps/ForestTileMap/DirtCliffTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Bodies/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/WorldObjects/ForestObjects/Foilage/Bush.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/WorldObjects/ForestObjects/Foilage/Grass.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/WorldObjects/ForestObjects/Foilage/Grass/Grass.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/WorldObjects/ForestObjects/Foilage/Tree.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Action RPG Resources/World/GrassBackground.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/TileMaps/ForestTileMap/DirtPath.tscn" type="PackedScene" id=7]
@@ -31,7 +31,13 @@ position = Vector2( 153, 81 )
 [node name="YSort" type="YSort" parent="YSort"]
 
 [node name="Grass" parent="YSort/YSort" instance=ExtResource( 4 )]
-position = Vector2( 101, 125 )
+position = Vector2( 100, 135 )
+
+[node name="Grass2" parent="YSort/YSort" instance=ExtResource( 4 )]
+position = Vector2( 84, 135 )
+
+[node name="Grass3" parent="YSort/YSort" instance=ExtResource( 4 )]
+position = Vector2( 117, 135 )
 
 [node name="Bush" parent="YSort/YSort" instance=ExtResource( 3 )]
 position = Vector2( 224, 92 )
