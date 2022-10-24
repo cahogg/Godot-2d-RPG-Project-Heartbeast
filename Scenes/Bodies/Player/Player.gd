@@ -20,7 +20,7 @@ onready var animationState = animationTree.get("parameters/playback")
 func _ready():
 	animationTree.active = true
 #delta contains time the last frame took to process. Delta = 1/60 if 60FPS, for example.
-func _process(delta):
+func _physics_process(delta):
 	match state:
 		MOVE:
 			move_state(delta)
